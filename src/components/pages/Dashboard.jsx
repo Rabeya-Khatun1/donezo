@@ -3,11 +3,13 @@ import {
   LayoutDashboard, CheckSquare, Calendar, BarChart2, Users,
   Settings, HelpCircle, LogOut, Search, Bell, Mail,
 } from 'lucide-react';
-import donezo from "../assets/donezo.png";
+import donezo from "../../assets/donezo.png";
 import { Link, Outlet, useLocation } from 'react-router';
-import downloadLogo from '../assets/download logo.png'
+import downloadLogo from '../../assets/download logo.png'
+
 
 const DonezoDashboard = () => {
+
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -18,6 +20,8 @@ const DonezoDashboard = () => {
         : "text-gray-400 hover:text-gray-600 hover:bg-gray-50"
       }`;
   };
+
+
 
   return (
     <div className="flex gap-4 min-h-screen bg-white p-4 font-sans text-slate-800">
@@ -141,7 +145,7 @@ const DonezoDashboard = () => {
           </div>
         </header>
 
-        <main className="flex-1 p-5 bg-[#f3f4f6] overflow-y-auto py-5 rounded-2xl">
+        <main className="w-[995px] p-5 bg-[#f3f4f6] overflow-y-auto py-5 rounded-2xl">
           <Outlet />
         </main>
       </div>

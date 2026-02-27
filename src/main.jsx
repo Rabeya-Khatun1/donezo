@@ -3,9 +3,13 @@ import './index.css';
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import { StrictMode } from 'react';
-import DonezoDashboard from './components/Dashboard';
-import Home from './components/Home'
-import Task from './components/Task';
+import DonezoDashboard from './components/pages/Dashboard';
+import Home from './components/pages/Home';
+import Task from "./components/pages/Task"
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -26,6 +30,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />,
+<QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />,
+</QueryClientProvider>
   </StrictMode>
 );
