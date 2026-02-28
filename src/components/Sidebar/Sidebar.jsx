@@ -19,10 +19,10 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       }`;
   };
 
-
+const navigate = useNavigate();
 const handleLogout = () => {
   localStorage.removeItem("token"); 
-  window.location.href = "/login"; 
+  navigate("/login"); 
 };
 
   return (

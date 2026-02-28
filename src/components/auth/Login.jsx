@@ -9,27 +9,27 @@ const navigate = useNavigate();
 
   const handleSubmit= async(e) => {
     e.preventDefault();
-  try {
-    const response = await fetch('https://task-api-eight-flax.vercel.app/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email,
-        password
-      })
-    });
+//   try {                                                            ig There is no api/login Endpoint
+//     const response = await fetch('https://task-api-eight-flax.vercel.app/api/login', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify({
+//         email,
+//         password
+//       })
+//     });
 
-    const data = await response.json();
-    if (response.ok) {
-      localStorage.setItem("token", data.token);
-      navigate("/");
-    } 
+//     const data = await response.json();
+//     if (response.ok) {
+//       localStorage.setItem("token", data.token);
+//       navigate("/");
+//     } 
 
-  } catch (error) {
-    console.error("Error:", error);
-  }
-    const dummyToken = "secret_token_1233214321";
-    localStorage.setItem("token", dummyToken);
+//   } catch (error) {
+//     console.error("Error:", error);
+//   }
+    const token = "secret_token_1233214321";
+    localStorage.setItem("token", token);
     navigate("/"); 
   };
 
