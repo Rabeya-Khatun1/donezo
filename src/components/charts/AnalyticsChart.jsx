@@ -65,7 +65,11 @@ const AnalyticsBarChart = ({ analytics }) => {
                                 return null;
                             }}
                         />
-                        <Bar dataKey="displayValue" barSize={45} radius={[25, 25, 25, 25]}>
+                        <Bar
+                            dataKey="displayValue"
+                            barSize={window.innerWidth < 640 ? 20 : 45}
+                            radius={[25, 25, 25, 25]}
+                        >
                             {processedData.map((entry, index) => {
                                 const isStripe = index === 0 || index === processedData.length - 1;
 

@@ -12,19 +12,19 @@ const Products = ({ products }) => {
     ];
 
     return (
-        <div className="col-span-4 bg-white rounded-2xl p-5 border border-gray-50">
+        <div className="col-span-4 bg-white rounded-2xl pb-5 px-5 pt-3 border border-gray-50">
             <div className="flex justify-between items-center mb-6">
                 <SectionHeader>Products</SectionHeader>
                 <Button
                     variant="secondary"
                     icon={Plus}
                     text="New"
-                    className="w-18 h-7 lg:h-8 px-3 text-[10px] lg:text-xs rounded-full "
+                    className="w-20 px-2 h-8 "
                     onClick={() => console.log("New Product")}
                 />
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
                 {products?.map((product, index) => {
                     const style = iconStyles[index % iconStyles.length];
 

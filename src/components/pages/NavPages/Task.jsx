@@ -1,9 +1,10 @@
 import React from 'react';
+import SectionHeader from '../../headers/SectionHeaders';
 
 const Task = () => {
     return (
         <div>
-            This is task
+         <SectionHeader>This is Task</SectionHeader>
         </div>
     );
 };

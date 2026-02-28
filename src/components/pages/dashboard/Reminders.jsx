@@ -6,10 +6,10 @@ import Button from "../../buttons/Buttons";
 
 const Reminders = () => {
   return (
-    <div className="box-style bg-white p-5 rounded-2xl space-y-4">
+    <div className="box-style bg-white p-3 md:p-5 rounded-2xl space-y-4">
  <SectionHeader>Reminders</SectionHeader>
       <div className="space-y-2">
-        <h4 className="text-xl font-semibold text-[#0D442A] leading-tight">
+        <h4 className="text-lg md:text-xl font-semibold text-[#0D442A] leading-tight">
           Meeting with Arc Company
         </h4>
         <p className="text-sm text-gray-400 tracking-tight">
@@ -21,7 +21,7 @@ const Reminders = () => {
           text="Start Meeting"
           variant="primary"
           icon={Video}
-          className="w-full"
+          className=" md:w-full"
           onClick={() => console.log("Meeting Started")}
         />
       </div>
