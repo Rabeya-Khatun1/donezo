@@ -71,7 +71,7 @@ const OverviewCard = ({ overview }) => {
                                         <span className="mr-0.5">5</span>
                                         <ChevronUp size={10} />
                                     </div>
-                                    <p className={`text-[10px] md:text-[11px] font-medium tracking-wide whitespace-nowrap ${card.theme === "dark" ? "text-[#A2D149]" : "text-[#6C997F]"}`}>
+                                    <p className={`text-[11px] md:text-[12px] font-semibold tracking-wide whitespace-nowrap ${card.theme === "dark" ? "text-[#A2D149]" : "text-[#6C997F]"}`}>
                                         {card.change}
                                     </p>
                                 </div>

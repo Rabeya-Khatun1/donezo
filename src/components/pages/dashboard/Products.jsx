@@ -19,7 +19,7 @@ const Products = ({ products }) => {
                     variant="secondary"
                     icon={Plus}
                     text="New"
-                    className="w-20 px-2 h-8 "
+                    className="mx-8 h-8 "
                     onClick={() => console.log("New Product")}
                 />
             </div>
