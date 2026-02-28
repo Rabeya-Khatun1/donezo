@@ -28,12 +28,9 @@ const AnalyticsBarChart = ({ analytics }) => {
     return (
         <div className="bg-white p-5 rounded-2xl shadow-sm ">
             <SectionHeader>Project Analytics</SectionHeader>
-
             <div className="h-[160px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={processedData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
-
-
                         <defs>
                             <pattern id="stripes" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
                                 <rect width="2" height="15" fill="#1F2937" />
@@ -49,7 +46,6 @@ const AnalyticsBarChart = ({ analytics }) => {
                         />
 
                         <YAxis hide domain={[0, maxValue + 10]} />
-
                         <Tooltip
                             cursor={false}
                             content={({ active, payload }) => {
@@ -69,7 +65,6 @@ const AnalyticsBarChart = ({ analytics }) => {
                                 return null;
                             }}
                         />
-
                         <Bar dataKey="displayValue" barSize={45} radius={[25, 25, 25, 25]}>
                             {processedData.map((entry, index) => {
                                 const isStripe = index === 0 || index === processedData.length - 1;

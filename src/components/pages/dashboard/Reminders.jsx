@@ -7,11 +7,7 @@ import Button from "../../buttons/Buttons";
 const Reminders = () => {
   return (
     <div className="box-style bg-white p-5 rounded-2xl space-y-4">
-      {/* Title Area */}
-
-      <SectionHeader>Reminders</SectionHeader>
-
-      {/* Meeting Information */}
+ <SectionHeader>Reminders</SectionHeader>
       <div className="space-y-2">
         <h4 className="text-xl font-semibold text-[#0D442A] leading-tight">
           Meeting with Arc Company
@@ -20,8 +16,6 @@ const Reminders = () => {
           Time : 02.00 pm - 04.00 pm
         </p>
       </div>
-
-      {/* Start Meeting Button */}
       <div className="mt-2">
         <Button
           text="Start Meeting"
